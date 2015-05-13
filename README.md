@@ -14,8 +14,15 @@ browserify a goodeggs angular app/modules
 npm install goodeggs-angular-browserify
 ```
 
-```js
-var goodeggsAngularBrowserify = require('goodeggs-angular-browserify');
+```coffeescript
+angularBrowserify = require('goodeggs-angular-browserify')
+
+angularBrowserify.run({
+  src: 'src/index.coffee'
+  dest: 'lib'
+  bundleName: 'index.js'
+  watch: false
+}, done)
 ```
 
 ## Contributing

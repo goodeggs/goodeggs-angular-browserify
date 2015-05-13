@@ -1,4 +1,4 @@
-exports.run = ({src, dest, bundleName}, cb) ->
+exports.run = ({src, dest, bundleName, watch}, cb) ->
   bundleName ?= 'app.js'
   gulp = require 'gulp'
   path = require 'path'
@@ -13,7 +13,7 @@ exports.run = ({src, dest, bundleName}, cb) ->
   rename = require 'gulp-rename'
   insertGlobals = require 'insert-module-globals'
 
-  watch = gutil.env.watch
+  watch ?= gutil.env.watch
   bundleQueue = 0
 
   browserifyThis = (entrypoint) ->
