@@ -1,6 +1,6 @@
 {
   "name": "goodeggs-angular-browserify",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "browserify a goodeggs angular app/modules",
   "author": "Good Eggs <open-source@goodeggs.com>",
   "contributors": [
