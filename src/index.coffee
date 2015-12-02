@@ -69,7 +69,8 @@ browserifyThis = ({relative, entries, dest, bundleName, watch, externalModules, 
 
   if watch
     # Wrap with watchify and rebundle on changes
-    b = watchify(b)
+    b = watchify b,
+      ignoreWatch: ['**/node_modules/**', '!**/node_modules/local_modules/**']
     b.on 'update', bundle
 
   bundle()
